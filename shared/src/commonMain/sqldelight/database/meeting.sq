@@ -1,0 +1,13 @@
+CREATE TABLE MeetingEntity (
+    date INTEGER NOT NULL PRIMARY KEY
+);
+
+getMeetings:
+SELECT * FROM MeetingEntity;
+
+addMeeting:
+INSERT OR REPLACE INTO MeetingEntity(date) VALUES (?);
+
+removeMeeting:
+DELETE FROM MeetingEntity
+WHERE date = ?;
