@@ -45,6 +45,7 @@ dependencies {
     implementation(Deps.composeNavigation)
     implementation(Deps.coilCompose)
     implementation(Deps.accompanistSystemUiController)
+    implementation(Deps.splashScreen)
 
     implementation(Deps.kotlinDateTime)
 

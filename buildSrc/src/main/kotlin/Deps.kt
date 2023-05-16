@@ -21,6 +21,8 @@ object Deps {
     private const val accompanistVersion = "0.28.0"
     const val accompanistSystemUiController = "com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion"
 
+    private const val splashScreenVersion = "1.0.0"
+    const val splashScreen = "androidx.core:core-splashscreen:$splashScreenVersion"
 
     // KOTLIN DATE TIME
     private const val dateTimeVersion = "0.4.0"
