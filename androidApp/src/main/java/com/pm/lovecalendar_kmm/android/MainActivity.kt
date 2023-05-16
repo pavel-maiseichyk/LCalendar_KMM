@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -33,18 +34,17 @@ class MainActivity : ComponentActivity() {
                 state = viewModel.state.collectAsState().value
 
                 val systemUiController = rememberSystemUiController()
-                val useDarkIcons = MaterialTheme.colors.isLight
                 val backgroundColor = MaterialTheme.colors.background
 
                 if (state.firstMonthDates.isNotEmpty()) {
                     SideEffect {
-                        systemUiController.setSystemBarsColor(
+                        systemUiController.setStatusBarColor(
                             color = backgroundColor,
-                            darkIcons = useDarkIcons
+                            darkIcons = true
                         )
                         systemUiController.setNavigationBarColor(
-                            color = backgroundColor,
-                            darkIcons = useDarkIcons
+                            color = Color.Transparent,
+                            darkIcons = true
                         )
                     }
                     MeetingsScreen(

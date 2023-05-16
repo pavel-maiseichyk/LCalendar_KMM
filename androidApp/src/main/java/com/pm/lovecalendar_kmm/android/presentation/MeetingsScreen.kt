@@ -1,12 +1,17 @@
 package com.pm.lovecalendar_kmm.android.presentation
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.pm.lovecalendar_kmm.android.presentation.components.DateItem
+import com.pm.lovecalendar_kmm.android.presentation.components.DaysLeftItem
 import com.pm.lovecalendar_kmm.android.presentation.components.HelperButton
 import com.pm.lovecalendar_kmm.android.presentation.components.MonthItem
 import com.pm.lovecalendar_kmm.presentation.MeetingsEvent
@@ -18,20 +23,25 @@ fun MeetingsScreen(
     state: MeetingsState,
     onEvent: (MeetingsEvent) -> Unit
 ) {
+    val context = LocalContext.current
+    val toastMessage = stringResource(R.string.feature_coming_soon)
+
     Column(
         modifier = Modifier
+            .fillMaxSize()
             .background(MaterialTheme.colors.background)
             .padding(horizontal = 16.dp)
+            .verticalScroll(rememberScrollState())
     ) {
         Row(
             modifier = Modifier.padding(top = 16.dp, bottom = 20.dp)
         ) {
             HelperButton(
-                onClick = { },
+                onClick = { Toast.makeText(context, toastMessage, Toast.LENGTH_LONG).show() },
                 drawablePath = R.drawable.settings
             )
             Spacer(modifier = Modifier.weight(1f))
-            DateItem(text = state.daysLeftText)
+            DaysLeftItem(text = state.daysLeftText)
             Spacer(modifier = Modifier.weight(1f))
             HelperButton(
                 onClick = { onEvent(MeetingsEvent.ToggleEditingMode) },
@@ -59,6 +69,6 @@ fun MeetingsScreen(
             dates = state.secondMonthDates,
             onDateTap = { onEvent(MeetingsEvent.OnDateTap(it)) }
         )
-        Spacer(modifier = Modifier.weight(1f))
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }

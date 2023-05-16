@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.sp
 import com.pm.lovecalendar_kmm.android.theme.montserrat
 
 @Composable
-fun DateItem(
+fun DaysLeftItem(
     text: String,
     modifier: Modifier = Modifier
 ) {

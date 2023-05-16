@@ -38,23 +38,4 @@ fun HelperButton(
             modifier = Modifier.padding(16.dp)
         )
     }
-//    IconButton(
-//        onClick = onClick,
-//        modifier = modifier
-//            .size(64.dp)
-//            .clip(RoundedCornerShape(24.dp))
-//            .background(MaterialTheme.colors.secondary)
-//            .border(
-//                border = BorderStroke(1.dp, Color.Black),
-//                shape = RoundedCornerShape(24.dp)
-//            )
-//
-//    ) {
-//        Icon(
-//            painter = painterResource(id = drawablePath),
-//            contentDescription = null,
-//            tint = MaterialTheme.colors.onSurface,
-//            modifier = Modifier.size(24.dp)
-//        )
-//    }
 }
