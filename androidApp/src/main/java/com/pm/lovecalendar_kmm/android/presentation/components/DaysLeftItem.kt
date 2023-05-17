@@ -1,5 +1,6 @@
 package com.pm.lovecalendar_kmm.android.presentation.components
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
@@ -28,5 +29,6 @@ fun DaysLeftItem(
             .border(width = 1.dp, color = Color.Black, shape = RoundedCornerShape(24.dp))
             .background(MaterialTheme.colors.primary)
             .padding(horizontal = 24.dp, vertical = 12.dp)
+            .animateContentSize()
     )
 }

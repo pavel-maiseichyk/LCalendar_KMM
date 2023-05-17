@@ -3,4 +3,5 @@
     <string name="app_name">LCalendar</string>
     <string name="before_month">before month</string>
     <string name="feature_coming_soon">Feature coming soon!</string>
+    <string name="edit">edit...</string>
 </resources>

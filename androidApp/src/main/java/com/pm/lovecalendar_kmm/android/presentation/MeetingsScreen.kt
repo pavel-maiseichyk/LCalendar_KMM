@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.unit.dp
 import com.pm.lovecalendar_kmm.android.presentation.components.DaysLeftItem
 import com.pm.lovecalendar_kmm.android.presentation.components.HelperButton
@@ -41,7 +42,7 @@ fun MeetingsScreen(
                 drawablePath = R.drawable.settings
             )
             Spacer(modifier = Modifier.weight(1f))
-            DaysLeftItem(text = state.daysLeftText)
+            DaysLeftItem(text = if (state.isInEditMode) stringResource(R.string.edit).uppercase() else state.daysLeftText)
             Spacer(modifier = Modifier.weight(1f))
             HelperButton(
                 onClick = { onEvent(MeetingsEvent.ToggleEditingMode) },
