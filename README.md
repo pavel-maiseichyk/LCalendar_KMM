@@ -6,6 +6,8 @@ Welcome to LCalendar! This app is designed to help couples in long-distance rela
 
 ## Features
 
+**Please note that the app is currently in alpha and not all the features may work as expected.**
+
 - **Plan meetings with your special ones:** You and your partner can choose the days of your next meeting and see how many days are left in the app.
 - **Keep track of your special dates:** You can add special dates like anniversaries to be highlighted in the app.
 
@@ -17,7 +19,7 @@ To install LCalendar for Android, follow these steps:
 3. Install the APK on your Android device.
 4. Launch LCalendar and enjoy!
 
-Unfortunately, the iOS version is currently unavailable for direct download. However, you can download the project and run it from Xcode to see the demo.
+Unfortunately, the iOS version is currently unavailable for direct downloading.
 
 ## Contributing
 
